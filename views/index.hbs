@@ -1,0 +1,56 @@
+<main>
+    <div class="row mb-2">
+        <div class="col-sm-8 offset-2">
+            <div class="row">
+                <div class="col-md-6">
+                    <form method="POST" action="/import" enctype="multipart/form-data"> 
+                        <div class="input-group">
+                            <div class="custom-file">
+                                <input type="file" name="file" class="custom-file-input" id="inputGroupFile" required accept=".csv, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel">
+                                <label class="custom-file-label" for="inputGroupFile">Choose file</label>
+                            </div>
+                            <div class="input-group-append">
+                                <button type="submit" class="btn btn-primary float-right mr-2">Import <i class="fa fa-upload"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <a href="/export" class="btn btn-primary float-right {{#unless movies.length}} disabled {{/unless }}" role="button" aria-disabled="true">
+                        Export <i class="fa fa-download"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-8 offset-2">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Id</th>
+                        <th scope="col">Movie</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Director</th>
+                        <th scope="col">Rating</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each movies}} 
+                        <tr>
+                            <th scope="row">{{ this.id }}</th>
+                            <td>{{ this.movie }}</td>
+                            <td>{{ this.category }}</td>
+                            <td>{{ this.director }}</td>
+                            <td><span class="badge bg-warning text-dark">{{ this.rating }}</span></td>
+                        </tr>
+                    {{else}}
+                        <tr>
+                            <td colspan="5" class="text-center">No Movies Found.</td>
+                        </tr>
+                    {{/each}}  
+                </tbody>
+            </table>
+        </div>
+    </div>
+</main>
