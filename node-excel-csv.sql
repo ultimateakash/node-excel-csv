@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 06, 2022 at 06:54 AM
+-- Generation Time: Mar 08, 2022 at 08:14 PM
 -- Server version: 10.4.22-MariaDB
 -- PHP Version: 7.4.26
 
@@ -42,14 +42,14 @@ CREATE TABLE `movies` (
 --
 
 INSERT INTO `movies` (`id`, `movie`, `category`, `director`, `rating`, `created_at`, `updated_at`) VALUES
-(1, 'The Dark Knight', 'Action', 'Christopher Nolan', 0.0, '2022-03-06 04:53:58', '2022-03-06 04:53:58'),
-(2, 'The Maze Runner', 'Sci-Fi', 'Wes Ball', 0.0, '2022-03-06 04:53:58', '2022-03-06 04:53:58'),
-(3, 'The Hobbit', 'Action', 'Peter Jackson', 0.0, '2022-03-06 04:53:58', '2022-03-06 04:53:58'),
-(4, 'Harry Potter', 'Fantasy', 'J. K. Rowling', 0.0, '2022-03-06 04:53:58', '2022-03-06 04:53:58'),
-(5, 'Ford v Ferrari', 'Drama', 'James Mangold', 0.0, '2022-03-06 04:53:58', '2022-03-06 04:53:58'),
-(6, 'Shawshank Redemption', 'Drama', 'Frank Darabont', 0.0, '2022-03-06 04:53:58', '2022-03-06 04:53:58'),
-(7, 'Escape From Alcatraz', 'Thriller', 'Jerry Fielding', 0.0, '2022-03-06 04:53:58', '2022-03-06 04:53:58'),
-(8, 'The Way Back', 'Adventure', 'Peter Weir', 0.0, '2022-03-06 04:53:58', '2022-03-06 04:53:58');
+(1, 'The Dark Knight', 'Action', 'Christopher Nolan', 9.0, '2022-03-08 19:11:26', '2022-03-08 19:11:26'),
+(2, 'The Maze Runner', 'Sci-Fi', 'Wes Ball', 6.5, '2022-03-08 19:11:26', '2022-03-08 19:11:26'),
+(3, 'The Hobbit', 'Action', 'Peter Jackson', 8.0, '2022-03-08 19:11:26', '2022-03-08 19:11:26'),
+(4, 'Harry Potter', 'Fantasy', 'J. K. Rowling', 7.5, '2022-03-08 19:11:26', '2022-03-08 19:11:26'),
+(5, 'Ford v Ferrari', 'Drama', 'James Mangold', 8.0, '2022-03-08 19:11:26', '2022-03-08 19:11:26'),
+(6, 'Shawshank Redemption', 'Drama', 'Frank Darabont', 10.0, '2022-03-08 19:11:26', '2022-03-08 19:11:26'),
+(7, 'Escape From Alcatraz', 'Thriller', 'Jerry Fielding', 7.6, '2022-03-08 19:11:26', '2022-03-08 19:11:26'),
+(8, 'The Way Back', 'Adventure', 'Peter Weir', 7.3, '2022-03-08 19:11:26', '2022-03-08 19:11:26');
 
 --
 -- Indexes for dumped tables

@@ -17,7 +17,7 @@ exports.import = async (req, res) => {
             movie: row['Movie'],
             category: row['Category'],
             director: row['Director'],
-            rating: row['rating']
+            rating: row['Rating']
         }))
         await Movie.bulkCreate(movies); 
     }
@@ -47,8 +47,11 @@ exports.export = async (req, res) => {
     });
     XLSX.utils.sheet_add_aoa(ws, headings); 
     XLSX.utils.book_append_sheet(wb, ws, 'Movies');
-    const filepath = `${outputPath}/movies.csv`;
-    XLSX.writeFile(wb, filepath); 
 
-    return res.download(filepath) 
+    const wbout = XLSX.write(wb, { bookType: 'csv', type: 'binary' });
+    const buffer = Buffer.from(wbout, 'binary');
+    res.attachment('movies.csv');
+
+    return res.send(buffer);
+    
 }
