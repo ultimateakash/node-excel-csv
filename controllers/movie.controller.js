@@ -48,8 +48,7 @@ exports.export = async (req, res) => {
     XLSX.utils.sheet_add_aoa(ws, headings); 
     XLSX.utils.book_append_sheet(wb, ws, 'Movies');
 
-    const wbout = XLSX.write(wb, { bookType: 'csv', type: 'binary' });
-    const buffer = Buffer.from(wbout, 'binary');
+    const buffer = XLSX.write(wb, { bookType: 'csv', type: 'buffer' }); 
     res.attachment('movies.csv');
 
     return res.send(buffer);
