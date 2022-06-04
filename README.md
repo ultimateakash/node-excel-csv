@@ -1,4 +1,4 @@
-# Node.js Import Export In Excel and CSV 
+# Import Export Excel/CSV In Node.js  
 <p align="center"><img src="https://github.com/ultimateakash/node-excel-csv/blob/master/public/images/node-excel-csv.png"></p> 
 
 1. Copy `.env.example` to `.env`
